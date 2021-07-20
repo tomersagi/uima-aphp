@@ -48,3 +48,7 @@ target/*
 
 # remove tests
 src/test/*
+
+# Intellij
+.idea
+*.iml

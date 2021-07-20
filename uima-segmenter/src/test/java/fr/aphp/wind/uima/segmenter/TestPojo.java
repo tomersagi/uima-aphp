@@ -33,7 +33,8 @@ private String text = "Hello world!";
 	@Test
 	public void testSection() throws IOException,
 			UIMAException {
-		SectionSegmenterPojo pj = new SectionSegmenterPojo("testSection.csv");
+		String section_file_path = TestPojo.class.getClassLoader().getResource("ref_doc_section.csv").getPath();
+		SectionSegmenterPojo pj = new SectionSegmenterPojo(section_file_path);
 		String result = pj.analyzeText(1234, 100009, text);
 		System.out.println(result);
 		assert (pj.getSectionCount().equals(4));
